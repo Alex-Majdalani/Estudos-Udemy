@@ -21,14 +21,33 @@ class CalcController {
     }, 1000);
   }
 
+  addEventListenerAll(element, events, fn) {
+    events.split(" ").forEach((event) => {
+      element.addEventListener(event, fn, false);
+    });
+  }
+
+  execBtn(value) {
+    switch (value) {
+      case "ac":
+        break;
+    }
+  }
+
   initButtonsEvents() {
     //MÉTODO P/ ENCONTRAR E CLICAR NOS BOTÕES
     let buttons = document.querySelectorAll("#buttons > g, #parts > g");
     console.log(buttons);
 
     buttons.forEach((btn, index) => {
-      btn.addEventListener("click", (e) => {
-        console.log(btn.className.baseVal.replace("btn-", ""));
+      this.addEventListenerAll(btn, "click drag", (e) => {
+        let textBtn = btn.className.baseVal.replace("btn-", "");
+
+        this.execBtn(textBtn);
+      });
+
+      this.addEventListenerAll(btn, "mouseover mouserup mousedown", (e) => {
+        btn.style.cursor = "pointer";
       });
     });
   }
