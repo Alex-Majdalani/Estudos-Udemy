@@ -9,7 +9,3 @@ um = () => {
 
 um();
 console.log(a);
-
-let a = 10,
-  b = 20,
-  c = 30;
