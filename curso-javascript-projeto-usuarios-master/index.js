@@ -1,7 +1,7 @@
 var nome = document.querySelector("#exampleInputName");
-console.log(nome);
 
 var generoM = document.querySelector("#exampleInputGenderM");
+
 var generoF = document.querySelector("#exampleInputGenderF");
 
 var nascimento = document.querySelector("#exampleInputBirth");
