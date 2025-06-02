@@ -1,22 +1,13 @@
-//alert("hello word");
-let Carro = {
-  marca: "Renault",
-  modelo: "Logan",
-  ipva: "valor('rb15')",
-  dimensoes: {
-    c: "4.250mm",
-    l: "1.735mm",
-    h: "1.525mm",
-  },
-};
-marca = Carro.marca;
-modelo = Carro.modelo;
-comprimento = Carro.dimensoes.c;
+var nome = document.querySelector("#exampleInputName");
+console.log(nome);
 
-executar = function () {
-  console.log(marca);
-  console.log(modelo);
-  console.log(comprimento);
-};
+var generoM = document.querySelector("#exampleInputGenderM");
+var generoF = document.querySelector("#exampleInputGenderF");
 
-executar();
+var nascimento = document.querySelector("#exampleInputBirth");
+
+var pais = document.querySelector("#exampleInputCountry");
+
+var email = document.querySelector("#exampleInputEmail1");
+
+var senha = document.querySelector("#exampleInputPassword1");
