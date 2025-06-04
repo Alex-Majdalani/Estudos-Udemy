@@ -11,5 +11,13 @@ var usuario = document.querySelector("#exampleInputAdmin");
 
 var campos = document.querySelectorAll("#form-user-create [name]");
 campos.forEach(function (campos, index) {
-  console.log(campos.id, campos.name, campos.value, index);
+  if (campos.name == "gender") {
+    if (campos.checked === true) {
+      console.log("SIM", campos);
+    }
+  } else {
+    console.log("NÃO");
+  }
+
+  //console.log(campos.id, campos.name, campos.value, index);
 });
