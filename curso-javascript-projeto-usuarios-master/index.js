@@ -11,5 +11,5 @@ var usuario = document.querySelector("#exampleInputAdmin");
 
 var campos = document.querySelectorAll("#form-user-create [name]");
 campos.forEach(function (campos, index) {
-  console.log(campos);
+  console.log(campos.id, campos.name, campos.value, index);
 });
