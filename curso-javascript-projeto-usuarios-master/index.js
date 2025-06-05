@@ -24,3 +24,9 @@ campos.forEach(function (campos, index) {
 });
 
 console.log(user);
+
+document.querySelectorAll("button").forEach(function () {
+  this.addEventListener("click", function () {
+    console.log("clicou");
+  });
+});
