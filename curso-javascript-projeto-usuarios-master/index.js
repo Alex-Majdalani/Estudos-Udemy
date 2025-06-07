@@ -11,22 +11,26 @@ var usuario = document.querySelector("#exampleInputAdmin");*/
 
 var campos = document.querySelectorAll("#form-user-create [name]");
 var user = {};
-campos.forEach(function (campos, index) {
-  if (campos.name == "gender") {
-    if (campos.checked === true) {
-      user[campos.name] = campos.value;
-    }
-  } else {
-    user[campos.name] = campos.value;
-  }
 
-  //console.log(campos.id, campos.name, campos.value, index);
-});
+function addLine(dataUser) {
+  console.log("addline", dataUser);
+}
 
-console.log(user);
+document
+  .getElementById("form-user-create")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    campos.forEach(function (campos, index) {
+      if (campos.name == "gender") {
+        if (campos.checked === true) {
+          user[campos.name] = campos.value;
+        }
+      } else {
+        user[campos.name] = campos.value;
+      }
 
-document.querySelectorAll("button").forEach(function () {
-  this.addEventListener("click", function () {
-    console.log("clicou");
+      //console.log(campos.id, campos.name, campos.value, index);
+    });
+
+    addLine(user);
   });
-});
